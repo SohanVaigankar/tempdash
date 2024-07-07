@@ -8,7 +8,15 @@ import {
   Cell,
 } from "recharts";
 
+type BarChartDataType = {
+  name: string;
+  value: number;
+};
 
+type BarChartProps = {
+  title?: string;
+  data: BarChartDataType[];
+};
 
 const COLORS = ["#C5FA58", "#526062", "#EF8E5B", "#0B6468"];
 
@@ -25,7 +33,7 @@ const BarChart = (props: BarChartProps) => {
             <YAxis fontSize={12} />
             <Tooltip />
             <Bar fill={"#8884d8"} dataKey="value" radius={[4, 4, 0, 0]}>
-              {data.map((entry, index) => (
+              {data.map((_, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}

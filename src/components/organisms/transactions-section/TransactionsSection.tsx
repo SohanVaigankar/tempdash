@@ -1,9 +1,9 @@
-import React from 'react'
-
 const TransactionsSection = () => {
   return (
-    <div>TransactionsSection</div>
-  )
-}
+    <div>
+      <div>TransactionsSection</div>
+    </div>
+  );
+};
 
-export default TransactionsSection
+export default TransactionsSection;

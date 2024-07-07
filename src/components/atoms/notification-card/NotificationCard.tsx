@@ -9,8 +9,9 @@ import {
 } from "react-icons/pi";
 
 type NotificationCardProps = {
+  id: number | string;
   message: string;
-  timeStamp: Date;
+  timeStamp: React.ReactNode;
   type: string;
 };
 const NotificationCard = (props: NotificationCardProps) => {

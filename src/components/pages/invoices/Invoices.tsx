@@ -1,9 +1,9 @@
-import React from 'react'
-
 const Invoices = () => {
   return (
-    <div>Invoices</div>
-  )
-}
+    <div>
+      <div>Invoices</div>
+    </div>
+  );
+};
 
-export default Invoices
+export default Invoices;

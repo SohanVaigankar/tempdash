@@ -1,9 +1,9 @@
-import React from 'react'
-
 const BusinessAccount = () => {
   return (
-    <div>BusinessAccount</div>
-  )
-}
+    <div>
+      <div>BusinessAccount</div>
+    </div>
+  );
+};
 
-export default BusinessAccount
+export default BusinessAccount;

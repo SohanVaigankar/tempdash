@@ -1,9 +1,9 @@
-import React from 'react'
-
 const Transactions = () => {
   return (
-    <div>Transactions</div>
-  )
-}
+    <div>
+      <div>Transactions</div>
+    </div>
+  );
+};
 
-export default Transactions
+export default Transactions;

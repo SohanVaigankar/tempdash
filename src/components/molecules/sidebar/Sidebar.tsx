@@ -1,4 +1,3 @@
-import React from "react";
 // icons
 import {
   PiCaretDownBold,
@@ -43,6 +42,8 @@ const Sidebar = () => {
       {/* docs & support */}
       <div>
         <h3>Pages</h3>
+        <PiCaretDownBold />
+        <PiCaretRightBold />
         <ul>
           <li>
             <PiLink />

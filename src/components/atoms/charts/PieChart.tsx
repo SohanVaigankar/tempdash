@@ -37,7 +37,7 @@ const PieChart = (props: PieChartProps) => {
               dataKey="value"
               cornerRadius={4}
             >
-              {data.map((entry, index) => (
+              {data.map((_, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}

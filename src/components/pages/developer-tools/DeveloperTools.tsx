@@ -1,9 +1,9 @@
-import React from 'react'
-
 const DeveloperTools = () => {
   return (
-    <div>DeveloperTools</div>
-  )
-}
+    <div>
+      <div>DeveloperTools</div>
+    </div>
+  );
+};
 
-export default DeveloperTools
+export default DeveloperTools;
