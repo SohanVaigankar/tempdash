@@ -1,9 +1,9 @@
-const Checkout = () => {
+const ProductDiscounts = () => {
   return (
     <div className="h-full  w-full flex justify-center items-center flex-grow my-auto text-2xl">
-      <div>Checkout</div>
+      <div>Product Discounts</div>
     </div>
   );
 };
 
-export default Checkout;
+export default ProductDiscounts;

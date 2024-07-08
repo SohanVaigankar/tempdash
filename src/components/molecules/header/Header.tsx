@@ -20,14 +20,13 @@ import user6 from "../../../assets/images/user6.png";
 
 type HeaderProps = {
   handleAlertSectionToggle: () => void;
+  handleSidebarToggle: () => void;
 };
 
 const Header = (props: HeaderProps) => {
-  const { handleAlertSectionToggle } = props;
+  const { handleAlertSectionToggle, handleSidebarToggle } = props;
 
   const { currentTheme, dispatch } = useThemeContext();
-
-  console.log("currentTheme", currentTheme);
 
   const handleThemeToggle = (theme: THEMES) => {
     dispatch({
@@ -43,7 +42,7 @@ const Header = (props: HeaderProps) => {
         <span className="font-semibold">Superstars AI</span>
       </div>
       {/* header */}
-      <div className="flex flex-col md:flex-row justify-between items-center w-full px-4 pb-4 border-b dark:border-gray-500/40">
+      <div className="flex flex-col gap-5 md:gap-0 md:flex-row justify-between items-center w-full px-4 pb-4 border-b dark:border-gray-500/40">
         {/* left */}
         <div className="flex gap-3 justify-start items-center">
           <PiRocketLaunch
@@ -82,11 +81,12 @@ const Header = (props: HeaderProps) => {
           <PiBellDuotone
             fontSize={"1.125rem"}
             className="hover:cursor-pointer"
+            onClick={handleAlertSectionToggle}
           />
           <PiSidebarDuotone
             fontSize={"1.125rem"}
             className="hover:cursor-pointer"
-            onClick={handleAlertSectionToggle}
+            onClick={handleSidebarToggle}
           />
         </div>
       </div>

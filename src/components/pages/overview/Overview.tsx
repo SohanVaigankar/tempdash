@@ -1,12 +1,11 @@
 // components
 import { OverviewSection } from "../../organisms/overview-section";
-import { DashboardLayout } from "../../layout/dashboard-layout";
 
 const Overview = () => {
   return (
-    <DashboardLayout>
+    <div className="overflow-y-scroll w-full">
       <OverviewSection />
-    </DashboardLayout>
+    </div>
   );
 };
 

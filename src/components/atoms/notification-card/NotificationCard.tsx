@@ -7,6 +7,7 @@ import {
   PiStarFourLight,
   PiUser,
 } from "react-icons/pi";
+import { relativeDateFormat } from "../../../utils/helperFunctions";
 
 type NotificationCardProps = {
   id: number | string;
@@ -44,7 +45,9 @@ const NotificationCard = (props: NotificationCardProps) => {
       </div>
       <div className="flex flex-col">
         <p className="text-left">{message}</p>
-        <span className="text-sm text-left text-gray-400">{timeStamp}</span>
+        <span className="text-sm text-left text-gray-400">
+          {relativeDateFormat(timeStamp)}
+        </span>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import { relativeDateFormat } from "../../../utils/helperFunctions";
+
 type ActivitiesCardProps = {
   id: number | string;
   picture: string;
@@ -16,7 +18,9 @@ const ActivitiesCard = (props: ActivitiesCardProps) => {
       />
       <div className="flex flex-col">
         <p className="text-left">{message}</p>
-        <span className="text-sm text-left text-gray-400">{timeStamp}</span>
+        <span className="text-sm text-left text-gray-400">
+          {relativeDateFormat(timeStamp)}
+        </span>
       </div>
     </div>
   );

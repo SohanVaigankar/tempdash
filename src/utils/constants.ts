@@ -34,25 +34,25 @@ export const MOCK_NOTIFICATIONS = [
   {
     id: 1,
     message: "You have a new issue that needs to be resolved",
-    timeStamp: Date(),
+    timeStamp: new Date(),
     type: "ISSUE",
   },
   {
     id: 2,
     message: "New team member joined",
-    timeStamp: Date(),
+    timeStamp: new Date().setDate(new Date().getDate() - 3),
     type: "NEW_MEMBER",
   },
   {
     id: 3,
     message: "New product feature available",
-    timeStamp: Date(),
+    timeStamp: new Date().setDate(new Date().getDate() - 15),
     type: "NEW_FEATURE",
   },
   {
     id: 4,
     message: "Andi Lane subscribed to you",
-    timeStamp: Date(),
+    timeStamp: new Date().setMonth(new Date().getMonth() - 3),
     type: "NEW_SUBSCRIBER",
   },
 ];
@@ -61,118 +61,132 @@ export const MOCK_ACTIVITIES = [
   {
     id: 1,
     message: "Discount details updated",
-    timeStamp: Date(),
+    timeStamp: new Date(),
     picture: user1,
   },
   {
     id: 2,
     message: "Aman added a new product",
-    timeStamp: Date(),
+    timeStamp: new Date(),
     picture: user2,
   },
   {
     id: 3,
     message: "Refunds cleared",
-    timeStamp: Date(),
+    timeStamp: new Date().setDate(new Date().getDate() - 1),
     picture: user3,
   },
   {
     id: 4,
     message: "Tax report download complete",
-    timeStamp: Date(),
+    timeStamp: new Date().setDate(new Date().getDate() - 9),
     picture: user4,
   },
   {
     id: 5,
     message: "Product details updated",
-    timeStamp: Date(),
+    timeStamp: new Date().setMonth(new Date().getMonth() - 2),
     picture: user5,
   },
 ];
 
-export const ROUTES = {
-  OVERVIEW: {
+export const NAVIGATION_ROUTES = [
+  {
+    id: "overview",
     icon: PiRocketLaunch,
     name: "Overview",
     path: "/overview",
     subRoutes: null,
   },
-  TRANSACTIONS: {
+  {
     icon: PiCurrencyCircleDollar,
     name: "Transactions",
     path: "/transactions",
+    id: "transactions",
     subRoutes: null,
   },
-  INVOICES: {
+  {
     icon: PiInvoiceDuotone,
     name: "Invoices",
     path: "/invoices",
+    id: "invoices",
     subRoutes: null,
   },
-  CUSTOMERS: {
+  {
     icon: PiUsers,
     name: "Customers",
     path: "/customers",
+    id: "customers",
     subRoutes: null,
   },
-  PRODUCT_CATALOG: {
+  {
     icon: PiBarcode,
     name: "Product Catalog",
     path: "/product-catalog",
-    subRoutes: {
-      PRODUCT_CATALOG_OVERVIEW: {
+    id: "product-catalog",
+    subRoutes: [
+      {
         name: "Overview",
         path: "/overview",
+        id: "overview",
         subRoutes: null,
       },
-      PRODUCTS: {
+      {
         name: "Products",
         path: "/products",
+        id: "products",
         subRoutes: null,
       },
-      DISCOUNTS: {
+      {
         name: "Discounts",
         path: "/discounts",
+        id: "discounts",
         subRoutes: null,
       },
-      TAXABLE_ITEMS: {
+      {
         name: "Taxable Items",
         path: "/taxable-items",
+        id: "taxable-items",
         subRoutes: null,
       },
-    },
+    ],
   },
-  REPORTS: {
+  {
     icon: PiIdentificationCardDuotone,
     name: "Reports",
     path: "/reports",
+    id: "reports",
     subRoutes: null,
   },
-  CHECKOUT: {
+  {
     icon: PiBasket,
     name: "Checkout",
     path: "/checkout",
+    id: "checkout",
     subRoutes: null,
   },
-  BUSINESS_ACCOUNT: {
+  {
     icon: PiNotebook,
     name: "Business Accoount",
     path: "/business-account",
+    id: "business-account",
     subRoutes: null,
   },
-  DEVELOPER_TOOLS: {
+  {
     icon: PiGear,
     name: "Developer Tools",
     path: "/developer-tools",
+    id: "developer-tools",
     subRoutes: null,
   },
-  SETTINGS: {
+  {
     icon: PiGear,
     name: "Settings",
     path: "/settings",
+    id: "settings",
     subRoutes: null,
   },
-};
+];
 
 export const MOCK_DASHBOARD_STATS = {
   TODAY: {
