@@ -22,8 +22,12 @@ const PieChart = (props: PieChartProps) => {
   const { data, title } = props;
 
   return (
-    <div className="rounded-md">
-      {title && <h3 className="font-semibold text-left mb-1">{title}</h3>}
+    <div className="rounded-md bg-white pt-4 min-w-[280px]">
+      {title && (
+        <h3 className="font-semibold text-left mb-1 pl-8 dark:text-neutral-700">
+          {title}
+        </h3>
+      )}
       <div className="h-full w-full max-h-[20rem] ">
         <ResponsiveContainer width="100%" height="100%">
           <PieChartContainer>

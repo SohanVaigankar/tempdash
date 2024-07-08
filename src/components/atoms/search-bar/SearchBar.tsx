@@ -8,7 +8,7 @@ const SearchBar = () => {
       <input
         type="text"
         placeholder="Search"
-        className="pl-7  py-1 text-sm rounded-md w-full"
+        className="pl-7  py-1 text-sm rounded-md w-full focus:outline-none"
       />
       <span className="absolute right-2 flex items-center text-sm">
         <PiCommand fontSize={"1rem"} />/

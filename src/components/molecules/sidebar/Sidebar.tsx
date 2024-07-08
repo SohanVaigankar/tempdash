@@ -22,6 +22,7 @@ import {
 import Logo from "../../../assets/svgs/logo.svg";
 // styles
 import "./Sidebar.css";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [showRecent, setShowRecent] = useState<boolean>(false);
@@ -130,17 +131,10 @@ const Sidebar = () => {
       id: "developer-tools",
       subRoutes: null,
     },
-    {
-      icon: <PiGear fontSize={"1.25rem"} />,
-      name: "Settings",
-      path: "/settings",
-      id: "settings",
-      subRoutes: null,
-    },
   ];
 
   return (
-    <nav className="flex flex-col gap-4 w-full min-w-[220px] lg:max-w-[15vw] p-5 overflow-y-auto">
+    <nav className="flex flex-col gap-4  min-w-[220px] md:max-w-[240px] p-5 overflow-y-auto">
       {/* favourites & recent */}
       <div>
         <div className="flex justify-between items-center mb-2">
@@ -206,9 +200,12 @@ const Sidebar = () => {
         </ul>
       </div>
       {/* logo */}
-      <div className="my-auto">
-        <img src={Logo} alt="logo" />
-      </div>
+      <Link
+        to={"/"}
+        className="lg:my-auto lg:mb-0 bg-transparent dark:bg-white/80 dark:rounded-md"
+      >
+        <img src={Logo} alt="logo" className="sm:mx-auto p-2" />
+      </Link>
     </nav>
   );
 };

@@ -3,7 +3,7 @@ import { OverviewSection } from "../../organisms/overview-section";
 
 const Overview = () => {
   return (
-    <div className="overflow-y-scroll w-full">
+    <div className="overflow-y-scroll w-full ">
       <OverviewSection />
     </div>
   );

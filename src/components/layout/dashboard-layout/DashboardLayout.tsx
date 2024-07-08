@@ -13,12 +13,23 @@ const DashboardLayout = () => {
   const handleAlertSectionToggle = () => setShowAlertSection(!showAlertSection);
 
   return (
-    <div className="h-screen">
+    <div className="h-full md:h-screen">
       <Header
         handleAlertSectionToggle={handleAlertSectionToggle}
         handleSidebarToggle={handleSidebarToggle}
       />
-      <div className="flex w-full h-full" style={{ maxHeight: "calc(92vh)" }}>
+      <div className="flex flex-col  w-full lg:hidden">
+        <div className="flex flex-col sm:flex-row justify-between">
+          {showSidebar && <Sidebar />}
+          <Outlet />
+        </div>
+        {showAlertSection && <AlertsSection />}
+      </div>
+
+      <div
+        className="hidden lg:flex  w-full lg:h-full "
+        style={{ maxHeight: "calc(92vh)" }}
+      >
         {showSidebar && <Sidebar />}
         <Outlet />
         {showAlertSection && <AlertsSection />}
