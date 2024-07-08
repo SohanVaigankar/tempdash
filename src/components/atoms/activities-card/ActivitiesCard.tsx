@@ -4,7 +4,7 @@ type ActivitiesCardProps = {
   id: number | string;
   picture: string;
   message: string;
-  timeStamp: React.ReactNode;
+  timeStamp: any;
 };
 
 const ActivitiesCard = (props: ActivitiesCardProps) => {

@@ -1,5 +1,5 @@
-export function relativeDateFormat(date) {
-  let duration = (date - new Date()) / 1000;
+export function relativeDateFormat(date: number) {
+  let duration = (date - Date.now()) / 1000;
 
   const formatter = new Intl.RelativeTimeFormat(undefined, {
     numeric: "auto",

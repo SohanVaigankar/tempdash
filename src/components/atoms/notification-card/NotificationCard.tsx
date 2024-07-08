@@ -12,7 +12,7 @@ import { relativeDateFormat } from "../../../utils/helperFunctions";
 type NotificationCardProps = {
   id: number | string;
   message: string;
-  timeStamp: React.ReactNode;
+  timeStamp: any;
   type: string;
 };
 const NotificationCard = (props: NotificationCardProps) => {

@@ -5,18 +5,7 @@ import user3 from "../assets/images/user3.png";
 import user4 from "../assets/images/user4.png";
 import user5 from "../assets/images/user5.png";
 
-// icons
-import {
-  PiBarcode,
-  PiBasket,
-  PiCurrencyCircleDollar,
-  PiGear,
-  PiIdentificationCardDuotone,
-  PiInvoiceDuotone,
-  PiNotebook,
-  PiRocketLaunch,
-  PiUsers,
-} from "react-icons/pi";
+
 
 export enum THEMES {
   LIGHT = "light",
@@ -87,104 +76,6 @@ export const MOCK_ACTIVITIES = [
     message: "Product details updated",
     timeStamp: new Date().setMonth(new Date().getMonth() - 2),
     picture: user5,
-  },
-];
-
-export const NAVIGATION_ROUTES = [
-  {
-    id: "overview",
-    icon: PiRocketLaunch,
-    name: "Overview",
-    path: "/overview",
-    subRoutes: null,
-  },
-  {
-    icon: PiCurrencyCircleDollar,
-    name: "Transactions",
-    path: "/transactions",
-    id: "transactions",
-    subRoutes: null,
-  },
-  {
-    icon: PiInvoiceDuotone,
-    name: "Invoices",
-    path: "/invoices",
-    id: "invoices",
-    subRoutes: null,
-  },
-  {
-    icon: PiUsers,
-    name: "Customers",
-    path: "/customers",
-    id: "customers",
-    subRoutes: null,
-  },
-  {
-    icon: PiBarcode,
-    name: "Product Catalog",
-    path: "/product-catalog",
-    id: "product-catalog",
-    subRoutes: [
-      {
-        name: "Overview",
-        path: "/overview",
-        id: "overview",
-        subRoutes: null,
-      },
-      {
-        name: "Products",
-        path: "/products",
-        id: "products",
-        subRoutes: null,
-      },
-      {
-        name: "Discounts",
-        path: "/discounts",
-        id: "discounts",
-        subRoutes: null,
-      },
-      {
-        name: "Taxable Items",
-        path: "/taxable-items",
-        id: "taxable-items",
-        subRoutes: null,
-      },
-    ],
-  },
-  {
-    icon: PiIdentificationCardDuotone,
-    name: "Reports",
-    path: "/reports",
-    id: "reports",
-    subRoutes: null,
-  },
-  {
-    icon: PiBasket,
-    name: "Checkout",
-    path: "/checkout",
-    id: "checkout",
-    subRoutes: null,
-  },
-  {
-    icon: PiNotebook,
-    name: "Business Accoount",
-    path: "/business-account",
-    id: "business-account",
-    subRoutes: null,
-  },
-  {
-    icon: PiGear,
-    name: "Developer Tools",
-    path: "/developer-tools",
-    id: "developer-tools",
-    subRoutes: null,
-  },
-  {
-    icon: PiGear,
-    name: "Settings",
-    path: "/settings",
-    id: "settings",
-    subRoutes: null,
   },
 ];
 

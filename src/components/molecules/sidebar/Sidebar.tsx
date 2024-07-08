@@ -1,13 +1,27 @@
 import { useState } from "react";
+// components
+import NavItem from "../../atoms/nav-item/NavItem";
 // icons
-import { PiDotOutlineFill, PiFileDoc, PiHeadset, PiLink } from "react-icons/pi";
-// constants, helper functions
-import { NAVIGATION_ROUTES } from "../../../utils/constants";
+import {
+  PiBarcode,
+  PiBasket,
+  PiCurrencyCircleDollar,
+  PiGear,
+  PiIdentificationCardDuotone,
+  PiInvoiceDuotone,
+  PiNotebook,
+  PiRocketLaunch,
+  PiUsers,
+  PiDotOutlineFill,
+  PiFileDoc,
+  PiHeadset,
+  PiLink,
+} from "react-icons/pi";
+
 // assets
 import Logo from "../../../assets/svgs/logo.svg";
 // styles
 import "./Sidebar.css";
-import NavItem from "../../atoms/nav-item/NavItem";
 
 const Sidebar = () => {
   const [showRecent, setShowRecent] = useState<boolean>(false);
@@ -27,8 +41,106 @@ const Sidebar = () => {
     },
   ];
 
+  const NAVIGATION_ROUTES = [
+    {
+      id: "overview",
+      icon: <PiRocketLaunch fontSize={"1.25rem"} />,
+      name: "Overview",
+      path: "/overview",
+      subRoutes: null,
+    },
+    {
+      icon: <PiCurrencyCircleDollar fontSize={"1.25rem"} />,
+      name: "Transactions",
+      path: "/transactions",
+      id: "transactions",
+      subRoutes: null,
+    },
+    {
+      icon: <PiInvoiceDuotone fontSize={"1.25rem"} />,
+      name: "Invoices",
+      path: "/invoices",
+      id: "invoices",
+      subRoutes: null,
+    },
+    {
+      icon: <PiUsers fontSize={"1.25rem"} />,
+      name: "Customers",
+      path: "/customers",
+      id: "customers",
+      subRoutes: null,
+    },
+    {
+      icon: <PiBarcode fontSize={"1.25rem"} />,
+      name: "Product Catalog",
+      path: "/product-catalog",
+      id: "product-catalog",
+      subRoutes: [
+        {
+          name: "Overview",
+          path: "/overview",
+          id: "overview",
+          subRoutes: null,
+        },
+        {
+          name: "Products",
+          path: "/products",
+          id: "products",
+          subRoutes: null,
+        },
+        {
+          name: "Discounts",
+          path: "/discounts",
+          id: "discounts",
+          subRoutes: null,
+        },
+        {
+          name: "Taxable Items",
+          path: "/taxable-items",
+          id: "taxable-items",
+          subRoutes: null,
+        },
+      ],
+    },
+    {
+      icon: <PiIdentificationCardDuotone fontSize={"1.25rem"} />,
+      name: "Reports",
+      path: "/reports",
+      id: "reports",
+      subRoutes: null,
+    },
+    {
+      icon: <PiBasket fontSize={"1.25rem"} />,
+      name: "Checkout",
+      path: "/checkout",
+      id: "checkout",
+      subRoutes: null,
+    },
+    {
+      icon: <PiNotebook fontSize={"1.25rem"} />,
+      name: "Business Accoount",
+      path: "/business-account",
+      id: "business-account",
+      subRoutes: null,
+    },
+    {
+      icon: <PiGear fontSize={"1.25rem"} />,
+      name: "Developer Tools",
+      path: "/developer-tools",
+      id: "developer-tools",
+      subRoutes: null,
+    },
+    {
+      icon: <PiGear fontSize={"1.25rem"} />,
+      name: "Settings",
+      path: "/settings",
+      id: "settings",
+      subRoutes: null,
+    },
+  ];
+
   return (
-    <nav className="flex flex-col gap-4 w-full min-w-[220px] lg:max-w-[15vw] p-5 ">
+    <nav className="flex flex-col gap-4 w-full min-w-[220px] lg:max-w-[15vw] p-5 overflow-y-auto">
       {/* favourites & recent */}
       <div>
         <div className="flex justify-between items-center mb-2">

@@ -37,7 +37,7 @@ const Header = (props: HeaderProps) => {
   return (
     <nav className="flex flex-col md:flex-row justify-between items-center w-full px-4 pt-4">
       {/* profile */}
-      <div className="flex justify-start items-center gap-2 text-nowrap pb-4 pr-4">
+      <div className="flex justify-start items-center gap-2 text-nowrap pb-4 pr-4 min-w-[220px]">
         <img src={user6} alt="profile" className="min-w-6 h-6" />
         <span className="font-semibold">Superstars AI</span>
       </div>

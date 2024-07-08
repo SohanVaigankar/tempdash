@@ -27,9 +27,9 @@ export const ThemeContextProvider = (props: { children: React.ReactNode }) => {
 
       const root = document.getElementById("root");
       if (state.currentTheme === THEMES.DARK) {
-        root.classList.add(THEMES.DARK);
+        root?.classList.add(THEMES.DARK);
       } else {
-        root.classList.remove(THEMES.DARK);
+        root?.classList.remove(THEMES.DARK);
       }
     }
   }, [state.currentTheme]);

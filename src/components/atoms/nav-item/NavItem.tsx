@@ -33,7 +33,7 @@ type NavItemProps = {
   name: string;
   path: string;
   icon?: React.ReactNode;
-  subRoutes: NavItemProps[];
+  subRoutes: NavItemProps[] | null;
 };
 
 const NavItem = (props: NavItemProps) => {
@@ -48,7 +48,7 @@ const NavItem = (props: NavItemProps) => {
     getActiveState(path, location.pathname, false, false)
       ? setIsSubmenuOpen(true)
       : setIsSubmenuOpen(false);
-  }, []);
+  }, [path, location.pathname]);
 
   return (
     <>
@@ -56,23 +56,23 @@ const NavItem = (props: NavItemProps) => {
         <Link
           key={id}
           to={path}
-          className={`flex items-center justify-start gap-2 hover:cursor-pointer py-[0.15rem] hover:font-semibold  hover:bg-gray-200 hover:dark:text-gray-800 rounded-md p-2 pl-3 nav-item pl-5 ${
+          className={`flex items-center justify-start gap-2 hover:cursor-pointer py-[0.15rem] hover:font-semibold  hover:bg-gray-200/80 hover:dark:text-gray-800 rounded-md p-2 nav-item pl-5 ${
             getActiveState(path, location.pathname, false)
               ? " font-semibold nav-item bg-gray-200 dark:text-gray-800"
               : ""
           }`}
         >
-          {/* <icon /> */}
+          {icon}
           <span>{name}</span>
         </Link>
       ) : (
-        <div className={`flex flex-col`}>
+        <div className={`flex flex-col`} style={{ marginLeft: "-0.5rem" }}>
           <div
             className={` ${isSubmenuOpen ? "bg-inherit" : ""}`}
             onClick={handleToggleSubMenu}
           >
             <div
-              className={`flex items-center justify-start gap-2 hover:cursor-pointer py-[0.15rem] hover:font-semibold  hover:bg-gray-200 hover:dark:text-gray-800 rounded-md p-2 pl-3 nav-item ${
+              className={`flex items-center justify-start gap-2 hover:cursor-pointer py-[0.15rem] hover:font-semibold  hover:bg-gray-200 hover:dark:text-gray-800 rounded-md p-2 pl-1 nav-item ${
                 isSubmenuOpen ? " font-semibold " : ""
               }`}
             >
@@ -81,8 +81,8 @@ const NavItem = (props: NavItemProps) => {
               ) : (
                 <PiCaretRightBold fontSize={"1rem"} className="text-gray-400" />
               )}
-              {icon && <icon />}
-              <span>{name}</span>
+              {icon}
+              <span className="text-nowrap">{name}</span>
             </div>
           </div>
           <div className={`${!isSubmenuOpen ? "hidden" : ""}`}>
@@ -91,7 +91,7 @@ const NavItem = (props: NavItemProps) => {
                 <Link
                   key={item.id}
                   to={`${path}${item.path}`}
-                  className={`flex items-center justify-start gap-2 hover:cursor-pointer py-[0.15rem] hover:font-semibold  hover:bg-gray-200 hover:dark:text-gray-800 rounded-md p-2 pl-12 nav-item ${
+                  className={`flex items-center justify-start gap-2 hover:cursor-pointer py-[0.15rem] hover:font-semibold  hover:bg-gray-200/80 hover:dark:text-gray-800 rounded-md p-2 pl-14 nav-item ${
                     getActiveState(item.path, location.pathname, true)
                       ? "font-semibold nav-item bg-gray-200 dark:text-gray-800"
                       : ""
