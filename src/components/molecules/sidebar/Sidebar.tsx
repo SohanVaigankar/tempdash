@@ -8,17 +8,11 @@ import {
   PiLink,
 } from "react-icons/pi";
 // assets
-import user6 from "../../../assets/images/user6.png";
 import Logo from "../../../assets/svgs/logo.svg";
 
 const Sidebar = () => {
   return (
     <nav>
-      {/* profile */}
-      <div className="flex justify-start items-center">
-        <img src={user6} alt="profile" />
-        <span>Superstars AI</span>
-      </div>
       {/* favourites & recent */}
       <div>
         <div>

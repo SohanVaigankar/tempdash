@@ -1,4 +1,3 @@
-import "./App.css";
 // components
 import {
   Overview,
@@ -14,7 +13,7 @@ import {
 
 function App() {
   return (
-    <>
+    <div className="w-full">
       <Overview />
       <Transactions />
       <Invoices />
@@ -24,7 +23,7 @@ function App() {
       <Checkout />
       <BusinessAccount />
       <DeveloperTools />
-    </>
+    </div>
   );
 }
 

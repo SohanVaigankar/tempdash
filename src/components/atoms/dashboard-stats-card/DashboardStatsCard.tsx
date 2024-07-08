@@ -11,7 +11,7 @@ type DashboardStatsCardProps = {
 const DashboardStatsCard = (props: DashboardStatsCardProps) => {
   const { changePercentage, extraClassName, stats, title } = props;
   return (
-    <div className={`px-4 py-5   rounded-xl shadow-sm ${extraClassName}`}>
+    <div className={`px-4 py-5 rounded-xl shadow-sm  ${extraClassName}`}>
       <h5 className="text-left font-semibold text-sm">{title}</h5>
       <div className="flex justify-between items-center mt-2">
         <h3 className="font-semibold text-2xl">{stats}</h3>

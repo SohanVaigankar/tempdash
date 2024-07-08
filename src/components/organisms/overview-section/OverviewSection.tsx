@@ -4,8 +4,8 @@ import { StatsCardGroup } from "../../molecules/stats-card-group";
 
 const OverviewSection = () => {
   return (
-    <div className="flex flex-col gap-10 ">
-      <select className="w-fit p-2 rounded-md">
+    <div className="flex flex-col flex-grow gap-8 p-5">
+      <select className="w-fit p-2 rounded-md bg-inherit ">
         <option value="today">Today</option>
         <option value="today">Last Week</option>
       </select>

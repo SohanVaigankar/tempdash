@@ -18,6 +18,11 @@ import {
   PiUsers,
 } from "react-icons/pi";
 
+export enum THEMES {
+  LIGHT = "light",
+  DARK = "dark",
+}
+
 export enum NOTIFICATION_TYPES {
   ISSUE = "ISSUE",
   NEW_MEMBER = "NEW_MEMBER",

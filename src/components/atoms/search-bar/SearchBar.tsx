@@ -3,7 +3,7 @@ import { PiCommand, PiMagnifyingGlass } from "react-icons/pi";
 
 const SearchBar = () => {
   return (
-    <form className="relative rounded-md overflow-hidden flex  items-center">
+    <form className="relative rounded-md overflow-hidden flex  items-center dark:text-gray-400">
       <PiMagnifyingGlass className="absolute left-2" fontSize={"1rem"} />
       <input
         type="text"

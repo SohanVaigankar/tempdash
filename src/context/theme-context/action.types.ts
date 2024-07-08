@@ -1,0 +1,3 @@
+export enum THEME_CONTEXT_ACTIONS {
+  TOGGLE_THEME = "TOGGLE_THEME",
+}

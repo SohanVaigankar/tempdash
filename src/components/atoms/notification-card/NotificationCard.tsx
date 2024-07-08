@@ -39,7 +39,7 @@ const NotificationCard = (props: NotificationCardProps) => {
 
   return (
     <div className="flex gap-2 items-start">
-      <div className="rounded-lg bg-blue-200 w-6 h-6 flex items-center justify-center text-gray-800 mt-[0.15rem]">
+      <div className="rounded-lg bg-blue-200 min-w-6 h-6 flex items-center justify-center text-gray-800 mt-[0.15rem]">
         {icon}
       </div>
       <div className="flex flex-col">
