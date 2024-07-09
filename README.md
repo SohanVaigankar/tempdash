@@ -25,8 +25,10 @@ Tech Stack and packages
 
 - screenshots
 
-![Light Theme]('./src/assets/readme/tempdash-light.png)
-![Dark Theme]('./src/assets/readme/tempdash-dark.png)
-![User Profile]('./src/assets/readme/tempdash-settings.png)
+![Light Theme](./src/assets/readme/tempdash-light.png)
+
+![Dark Theme](./src/assets/readme/tempdash-dark.png)
+
+![User Profile](./src/assets/readme/tempdash-settings.png)
 
 - [Sohan Vaigankar](https://peerlist.io/sohan) - svaigankar2000@gmail.com

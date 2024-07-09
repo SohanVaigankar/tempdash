@@ -133,3 +133,18 @@ export const MOCK_REVENUE_DATA = [
   { name: "Jun", value: 200 },
   { name: "Jul", value: 210 },
 ];
+
+export const MOCK_TRANSACTIONS_DATA = [
+  { id: 1, name: "Bruce Wayne", order_id: "ODR-989892-ED", amount: 300 },
+  { id: 2, name: "Tony Stark", order_id: "ODR-985892-ED", amount: 25 },
+  { id: 3, name: "Bruce Banner", order_id: "ODR-929892-ED", amount: 305 },
+  { id: 4, name: "Clint Barton", order_id: "ODR-989894-ED", amount: 230 },
+  { id: 5, name: "Peter Parker", order_id: "ODR-989892-ED", amount: 2225 },
+  { id: 6, name: "Thor Odinson", order_id: "ODR-989891-ED", amount: 315 },
+  { id: 7, name: "Scott Lang", order_id: "ODR-988892-ED", amount: 30 },
+  { id: 8, name: "Bucky Barnes", order_id: "ODR-981192-ED", amount: 2205 },
+  { id: 9, name: "Steve Rogers", order_id: "ODR-989897-ED", amount: 35 },
+  { id: 10, name: "Natasha Romanoff", order_id: "ODR-789892-ED", amount: 3000 },
+  { id: 11, name: "Harry Osborn", order_id: "ODR-289892-ED", amount: 225 },
+  { id: 12, name: "Gwen Stacy", order_id: "ODR-189892-ED", amount: 9 },
+]
