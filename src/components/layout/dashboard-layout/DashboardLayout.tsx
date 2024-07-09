@@ -4,6 +4,8 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../../molecules/sidebar/Sidebar";
 import Header from "../../molecules/header/Header";
 import { AlertsSection } from "../../organisms/alerts-section";
+// icons
+import { PiXBold } from "react-icons/pi";
 
 const DashboardLayout = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -13,17 +15,34 @@ const DashboardLayout = () => {
   const handleAlertSectionToggle = () => setShowAlertSection(!showAlertSection);
 
   return (
-    <div className="h-full md:h-screen">
+    <div className="h-full lg:h-screen">
       <Header
         handleAlertSectionToggle={handleAlertSectionToggle}
         handleSidebarToggle={handleSidebarToggle}
       />
-      <div className="flex flex-col  w-full lg:hidden">
-        <div className="flex flex-col sm:flex-row justify-between">
-          {showSidebar && <Sidebar />}
-          <Outlet />
-        </div>
-        {showAlertSection && <AlertsSection />}
+      <div
+        className={`relative flex flex-col  w-full lg:hidden h-full  ${
+          showSidebar ? "h-[82vh] md:h-[90vh]" : "h-full "
+        }`}
+      >
+        {showSidebar ? (
+          <>
+            <div className=" z-10 w-full  h-full flex flex-col items-center md:flex-row justify-between pt-14 sm:pt-0 sm:justify-center">
+              <div className="absolute bg-gray-300 dark:bg-[#333] rounded-t-lg mt-10  top-0 left-0 h-full w-full z-0"></div>
+              <PiXBold
+                fontSize={"1.5rem"}
+                className="absolute right-3 top-12 hover:cursor-pointer hover:border-2 hover:rounded-sm"
+                onClick={handleSidebarToggle}
+              />
+              <Sidebar />
+            </div>
+          </>
+        ) : (
+          <>
+            <Outlet />
+            {showAlertSection && <AlertsSection />}
+          </>
+        )}
       </div>
 
       <div

@@ -26,7 +26,7 @@ const SearchBar = (props: SearchBarProps) => {
 
   return (
     <div
-      className={`relative rounded-md overflow-hidden flex  items-center dark:text-gray-400 ${extraClassName}`}
+      className={`relative rounded-md overflow-hidden flex z-0  items-center dark:text-gray-400 ${extraClassName}`}
     >
       <PiMagnifyingGlass className="absolute left-2" fontSize={"1rem"} />
       <input
