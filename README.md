@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# Tempdashh
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Deployment Link - [https://tempdashh.vercel.app](https://tempdashh.vercel.app)
 
-Currently, two official plugins are available:
+Tech Stack and packages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [x] Reactjs
+- [x] TypeScript
+- [x] TailwindCSS
+- [x] Recharts
+- [x] Vercel - for deployment
 
-## Expanding the ESLint configuration
+### To run the project locally
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. simply clone this github repository on your local machine
+2. navigate to the cloned repo using cd command in terminal
+3. ensure that you're running node v18 or above
+4. execute following command in the directory
 
-- Configure the top-level `parserOptions` property like this:
+   ```js
+   npm install && npm run dev
+   ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+5. follow the instructions on terminal, by default your application shall be running on [http://localhost:5173](http://localhost:5173)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- screenshots
+
+![Light Theme]('./src/assets/readme/tempdash-light.png)
+![Dark Theme]('./src/assets/readme/tempdash-dark.png)
+![User Profile]('./src/assets/readme/tempdash-settings.png)
+
+- [Sohan Vaigankar](https://peerlist.io/sohan) - svaigankar2000@gmail.com
