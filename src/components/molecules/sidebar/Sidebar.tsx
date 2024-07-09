@@ -134,7 +134,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <nav className="z-10 flex flex-col gap-4  min-w-[220px] sm:max-w-[500px] w-full lg:max-w-[240px] p-5 overflow-y-auto">
+    <nav className="z-10 flex flex-col gap-4  min-w-[220px] sm:max-w-[500px] w-full lg:max-w-[240px] p-5 overflow-y-auto transition-all duration-1000 ease-in-out">
       {/* favourites & recent */}
       <div>
         <div className="flex justify-between items-center mb-2">

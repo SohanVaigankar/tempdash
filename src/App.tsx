@@ -22,7 +22,7 @@ import { FullScreenLayout } from "./components/layout/fullscreen-layout";
 
 function App() {
   return (
-    <div className="w-full">
+    <div className="w-full ease-in-out  duration-100 ">
       <Routes>
         <Route element={<DashboardLayout />}>
           <Route path="/" element={<Navigate to={"/overview"} />} />
