@@ -40,7 +40,7 @@ const TransactionsSection = () => {
   }, [query, transactionData]);
 
   return (
-    <div className="container flex flex-col gap-6 mx-auto mt-8 lg:mt-0">
+    <div className="container flex flex-col gap-6 mx-auto mt-8 lg:mt-8">
       <div className="flex flex-col gap-6 xl:flex-row justify-between items-center w-full">
         <div>Recent Transactions</div>
         <SearchBar
