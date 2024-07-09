@@ -27,7 +27,7 @@ const PaginatedTable = <T extends Record<string, any>>(
 
   //   sorting data based on sort config
   const sortedData = useMemo(() => {
-    const sortableData = data;
+    const sortableData = [...data];
 
     if (sortableData.length > 0 && sortConfig !== null) {
       sortableData.sort((a, b) => {

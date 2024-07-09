@@ -29,11 +29,12 @@ const DashboardLayout = () => {
           <>
             <div className=" z-10 w-full  h-full flex flex-col items-center md:flex-row justify-between pt-14 sm:pt-0 sm:justify-center">
               <div className="absolute bg-gray-300 dark:bg-[#333] rounded-t-lg mt-10  top-0 left-0 h-full w-full z-0"></div>
-              <PiXBold
-                fontSize={"1.5rem"}
-                className="absolute right-3 top-12 hover:cursor-pointer hover:border-2 hover:rounded-sm"
-                onClick={handleSidebarToggle}
-              />
+              <span onClick={handleSidebarToggle}>
+                <PiXBold
+                  fontSize={"1.5rem"}
+                  className="absolute right-3 top-12 hover:cursor-pointer hover:rounded-sm"
+                />
+              </span>
               <Sidebar />
             </div>
           </>
