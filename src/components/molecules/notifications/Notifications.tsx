@@ -7,7 +7,7 @@ const Notifications = () => {
   return (
     <div className="flex flex-col gap-4  items-start">
       <h4 className="font-semibold">Notifications</h4>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-1">
         {MOCK_NOTIFICATIONS?.map((notification) => (
           <NotificationCard key={notification.id} {...notification} />
         ))}
